@@ -1,0 +1,10 @@
+ВАЖНО: Добавьте следующие строки в файл .env (расположен в корне проекта):
+
+# ======== VK Configuration ========
+VK_SECRET=blupper_secret123
+VK_GROUP_ID=219569549
+VK_CONFIRMATION_TOKEN=e16b5ce7
+VK_ACCESS_TOKEN=vk1.a.oy5FrvTv4CI0sgjvZwBhGNwwcBwAeT7-QdVDOQjSjj4MZua13LHagd0iJETbcZDMOP8u7TaWCs9b_6uYmugxhye7qJUWIrCmkkf0uWwedsw9j6JJRQW9gbOLRdCB_-R0R-Pju8bSXtyeHm4wygb71tWHRtV9rx_UFExWu_o1u5YrXHYemuzkl_87Xd4Bdt5gxwOSc8xtX0RqOlpV4cdhmg
+
+# ======== Telegram Bot ========
+TG_BOT_TOKEN=your_telegram_bot_token_here
