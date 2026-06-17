@@ -10,7 +10,6 @@ const { curly } = require('node-libcurl')
 var request = require('request');
 
 var requestify = require('requestify');
-domain = 'https://mortalsoft.online';
 
 var crypto = require('crypto'); 
 
@@ -26,12 +25,12 @@ client.query = util.promisify(client.query);
 client.query("SET SESSION wait_timeout = 604800");
 
 const server = require("https").createServer({
-    key: fs.readFileSync('/etc/letsencrypt/live/mortalsoft.online/privkey.pem'),
-    cert: fs.readFileSync('/etc/letsencrypt/live/mortalsoft.online/fullchain.pem')
+    key: fs.readFileSync('/etc/letsencrypt/live/luckyspin.vip/privkey.pem'),
+    cert: fs.readFileSync('/etc/letsencrypt/live/luckyspin.vip/fullchain.pem')
 }),
 io = require("socket.io")(server, {
     cors: {
-        origin: "https://mortalsoft.online",
+        origin: "https://luckyspin.vip",
         methods: ["GET", "POST"]
     }
 });

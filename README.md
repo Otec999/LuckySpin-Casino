@@ -147,7 +147,7 @@ php artisan serve
 
 <div align="center">
 
-[![Telegram](https://img.shields.io/badge/Telegram-%40mortalsoft-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/mortalsoft)
+[![Telegram](https://img.shields.io/badge/Telegram-%40luckyspin_666-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/luckyspin_666)
 
 </div>
 
@@ -269,7 +269,7 @@ php artisan serve
 
 <div align="center">
 
-[![Telegram](https://img.shields.io/badge/Telegram-%40mortalsoft-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/mortalsoft)
+[![Telegram](https://img.shields.io/badge/Telegram-%40luckyspin_666-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/luckyspin_666)
 
 </div>
 
@@ -391,7 +391,7 @@ php artisan serve
 
 <div align="center">
 
-[![Telegram](https://img.shields.io/badge/Telegram-%40mortalsoft-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/mortalsoft)
+[![Telegram](https://img.shields.io/badge/Telegram-%40luckyspin_666-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/luckyspin_666)
 
 </div>
 

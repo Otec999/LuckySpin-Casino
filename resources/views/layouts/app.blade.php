@@ -234,7 +234,7 @@ $snow = 0;
             <a onclick="$('#moreBtn').click();load('bonus')">Бонусы</a>
             <a onclick="$('#moreBtn').click();load('refs')">Партнерка</a>
             <a onclick="$('#moreBtn').click();load('faq')">Faq</a>
-            <a href="https://t.me/mortalsoft" target="_blank">Поддержка</a>
+            <a href="https://t.me/luckyspin_666" target="_blank">Поддержка</a>
         </li>
     </div>
     <div class="preloader d-flex align-center justify-center">
@@ -392,7 +392,7 @@ $snow = 0;
                         </a>
                     </li>
                     <li>
-                        <a href="https://t.me/mortalsoft" target="_blank" class="d-flex align-center">
+                        <a href="https://t.me/luckyspin_666" target="_blank" class="d-flex align-center">
                             <svg class="icon"><use xlink:href="images/symbols.svg#support"></use></svg>
                             <span>Поддержка</span>
                         </a>

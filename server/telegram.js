@@ -29,7 +29,6 @@ bot.on('message', async msg => {
     if(!text) return bot.sendMessage(chat_id, 'Сообщение не должно содержать картинки / смайлики / стикеры');
 
     if(text.toLowerCase() === '/start') {
-        return bot.sendMessage(chat_id, `Привет!\nДля того, чтобы получить бонус, необходимо:\n\n1. 👉 Подписаться на <a href="https://t.me/mortalsoft">канал</a>\n2. 👉 Ввести команду, полученную на сайте`, {
             parse_mode: "HTML"
         });
     }
@@ -42,8 +41,7 @@ bot.on('message', async msg => {
         let subs = await bot.getChatMember('@demosoyou', chat_id).catch((err) => {});
 
         if (!subs || subs.status == 'left' || subs.status == undefined) {
-            return bot.sendMessage(chat_id, `Вы не подписались на <a href="https://t.me/mortalsoft">канал</a>`, {
-                parse_mode: "HTML",
+
                 disable_web_page_preview: true
             });
         }
@@ -66,25 +64,22 @@ bot.on('message', async msg => {
 
 nodeCron.schedule('0 13 * * *', async () => {
     setTimeout(async () => {
-        request.post('https://mortalsoft.online/createPromoTG').then(function(response) {
+        request.post('https://luckyspin.vip/createPromoTG').then(function(response) {
             const res = response.getBody();
-            return bot.sendMessage("@demosoyou", `
 💰 Промокод 10₽/250акт — ${res.promoSum}
         
 ⚡ Промокод на 15%/20акт — ${res.promoDep}
         
-🚀 Актуальный домен — mortalsoft.online
+🚀 Актуальный домен — luckyspin.vip
         
 📢 Сайт работает в штатном режиме, выводы в среднем до 2 часов.`, {
-                parse_mode: 'Markdown',
                 reply_markup: JSON.stringify({
                 inline_keyboard: [
                     [
-                        { "text": "Активировать промокод", "url": "https://mortalsoft.online/" }
+                        { "text": "Активировать промокод", "url": "https://luckyspin.vip/" }
                     ]
                 ]
                 })
-            })
         })
 
         console.log(`[APP] Промокоды выданы`);
@@ -93,50 +88,45 @@ nodeCron.schedule('0 13 * * *', async () => {
 
 nodeCron.schedule('0 18 * * *', async () => {
     setTimeout(async () => {
-        request.post('https://mortalsoft.online/createPromoTG').then(function(response) {
+        request.post('https://luckyspin.vip/createPromoTG').then(function(response) {
             const res = response.getBody();
             return bot.sendMessage("@demosoyou", `
 💰 Промокод 10₽/250акт — ${res.promoSum}
         
-⚡ Промокод на 15%/20акт — ${res.promoDep}
         
-🚀 Актуальный домен — mortalsoft.online
+🚀 Актуальный домен — luckyspin.vip
         
 📢 Сайт работает в штатном режиме, выводы в среднем до 2 часов.`, {
                 parse_mode: 'Markdown',
                 reply_markup: JSON.stringify({
                 inline_keyboard: [
-                    [
-                        { "text": "Активировать промокод", "url": "https://mortalsoft.online/" }
+                        { "text": "Активировать промокод", "url": "https://luckyspin.vip/" }
                     ]
                 ]
                 })
             })
         })
 
-        console.log(`[APP] Промокоды выданы`);
     }, 10 * 1000);
 });
 
 nodeCron.schedule('0 21 * * *', async () => {
     setTimeout(async () => {
-        request.post('https://mortalsoft.online/createPromoTG').then(function(response) {
+        request.post('https://luckyspin.vip/createPromoTG').then(function(response) {
             const res = response.getBody();
             return bot.sendMessage("@demosoyou", `
 💰 Промокод 10₽/250акт — ${res.promoSum}
         
 ⚡ Промокод на 15%/20акт — ${res.promoDep}
         
-🚀 Актуальный домен — mortalsoft.online
-        
+🚀 Актуальный домен — luckyspin.vip
 📢 Сайт работает в штатном режиме, выводы в среднем до 2 часов.`, {
                 parse_mode: 'Markdown',
                 reply_markup: JSON.stringify({
                 inline_keyboard: [
                     [
-                        { "text": "Активировать промокод", "url": "https://mortalsoft.online/" }
+                        { "text": "Активировать промокод", "url": "https://luckyspin.vip/" }
                     ]
-                ]
                 })
             })
         })
@@ -144,7 +134,6 @@ nodeCron.schedule('0 21 * * *', async () => {
         console.log(`[APP] Промокоды выданы`);
     }, 10 * 1000);
 });
-
 function makeIdentify(length) {
     var result = "";
     var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -156,45 +145,41 @@ function makeIdentify(length) {
 }
 
 async function sendCodes(type, name, amount, limit, wager, need_deposit) {
-    request.post('https://mortalsoft.online/createPromoTG').then(function(response) {
+    request.post('https://luckyspin.vip/createPromoTG').then(function(response) {
         return bot.sendMessage("@demosoyou", `
         💰 Промокод 10₽/250акт —
         
         ⚡ Промокод на 15%/20акт —
         
-        🚀 Актуальный домен — mortalsoft.online
+        🚀 Актуальный домен — luckyspin.vip
         
         📢 Сайт работает в штатном режиме, выводы в среднем до 2 часов.`, {
             parse_mode: 'Markdown',
             reply_markup: JSON.stringify({
-              inline_keyboard: [
                 [
-                  { "text": "Активировать промокод", "url": "https://mortalsoft.online/" }
+                  { "text": "Активировать промокод", "url": "https://luckyspin.vip/" }
                 ]
               ]
             })
         })
-    })
     return await ctx.telegram.sendMessage(config.telegram_channel_id, `
 💰 Промокод 10₽/250акт —
 
 ⚡ Промокод на 15%/20акт —
 
-🚀 Актуальный домен — mortalsoft.online
+🚀 Актуальный домен — luckyspin.vip
 
-📢 Сайт работает в штатном режиме, выводы в среднем до 2 часов.`, {
     parse_mode: 'Markdown',
     reply_markup: JSON.stringify({
       inline_keyboard: [
         [
-          { "text": "Активировать промокод", "url": "https://mortalsoft.online/" }
+          { "text": "Активировать промокод", "url": "https://luckyspin.vip/" }
         ]
       ]
     })
 });
 }
 
-function db(query, params = []) {
     return new Promise((resolve, reject) => {
         client.query(query, params, function (error, result) {
             if (error) {
@@ -202,7 +187,6 @@ function db(query, params = []) {
                 reject(error);
                 return;
             }
-            resolve(result);
         });
     });
 }
