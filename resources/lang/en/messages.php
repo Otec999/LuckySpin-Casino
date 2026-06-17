@@ -58,6 +58,14 @@ return [
     'profile_register' => 'Registration date',
     'profile_games' => 'Games played',
     'profile_wins' => 'Wins',
+    'profile_total_win' => 'Total Win',
+    'profile_max_win' => 'Max Win',
+    'profile_avg_bet' => 'Avg. Bet',
+    'profile_loses' => 'Losses',
+    'profile_hide_avatars' => 'Hide other avatars',
+    'profile_balance_settings' => 'Balance Settings',
+    'profile_real_balance' => 'Real Balance',
+    'profile_demo_balance' => 'Demo Balance',
     'profile_rating' => 'Rating',
 
     // Bonuses
@@ -67,6 +75,15 @@ return [
     'bonus_already' => 'BONUS ALREADY CLAIMED',
     'bonus_wheel' => 'Spin the wheel of fortune and earn!',
     'bonus_try' => 'Try',
+    'bonus_spin' => 'Spin',
+    'bonus_levels_desc' => 'Level up your rank and earn prizes!',
+    'bonus_levels_exp' => 'Experience is earned for deposits.',
+    'bonus_repost_title' => 'Repost Bonus',
+    'bonus_balance' => 'Bonus Balance',
+    'bonus_exchange' => 'Exchange',
+    'bonus_achievements' => 'Achievements',
+    'profile_level' => 'level',
+    'profile_levels' => 'Levels',
 
     // Referral
     'ref_title' => 'Referral Program',
@@ -74,6 +91,7 @@ return [
     'ref_earnings' => 'Earnings',
     'ref_invited' => 'Invited',
     'ref_percent' => 'Commission percentage',
+    'ref_percent_disp' => 'available for withdrawal',
     'ref_level1' => 'Level 1',
     'ref_level2' => 'Level 2',
     'ref_level3' => 'Level 3',
