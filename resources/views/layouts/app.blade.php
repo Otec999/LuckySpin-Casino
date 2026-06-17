@@ -470,7 +470,7 @@ $snow = 0;
                         <a href="#" onclick="load('policy')">Политика конфиденциальности</a>
                     </li>
                 </nav>
-                <div class="footer__text"><span>SO-YOU-START.RU — ALL RIGHTS RESERVED.</span></div>
+                <div class="footer__text"><span>LuckySpin.vip — ALL RIGHTS RESERVED.</span></div>
             </div>
         </div>
         @include('layouts.chat')

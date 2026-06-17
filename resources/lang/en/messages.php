@@ -1,0 +1,166 @@
+<?php
+
+return [
+    // Navigation
+    'nav_home' => 'Home',
+    'nav_bonus' => 'Bonuses',
+    'nav_referral' => 'Referral',
+    'nav_faq' => 'F.A.Q',
+    'nav_support' => 'Support',
+    'nav_terms' => 'Terms',
+    'nav_policy' => 'Privacy Policy',
+    'nav_profile' => 'Profile',
+    'nav_logout' => 'Logout',
+    'nav_login' => 'Login',
+    'nav_promo' => 'Promocodes',
+    'nav_chat' => 'Chat',
+    'nav_more' => 'More',
+    'nav_wallet' => 'Wallet',
+    'nav_rules' => 'Rules',
+
+    // Auth
+    'auth_title' => 'Login',
+    'auth_vk' => 'VK',
+    'auth_google' => 'GOOGLE',
+    'auth_yandex' => 'YANDEX',
+    'auth_telegram' => 'TELEGRAM',
+
+    // Wallet
+    'wallet_deposit' => 'Deposit',
+    'wallet_withdraw' => 'Withdraw',
+    'wallet_history' => 'History',
+    'wallet_deposit_history' => 'Deposits',
+    'wallet_withdraw_history' => 'Withdrawals',
+    'wallet_amount' => 'Deposit amount',
+    'wallet_total' => 'Total to pay',
+    'wallet_commission' => 'Commission',
+    'wallet_min_withdraw' => 'Min. withdraw',
+    'wallet_to_withdraw' => 'To withdraw',
+    'wallet_received' => 'You will receive',
+    'wallet_details' => 'Enter payment details',
+    'wallet_max_bonus_withdraw' => 'Maximum bonus withdrawal',
+    'wallet_deposit_btn' => 'DEPOSIT',
+    'wallet_withdraw_btn' => 'WITHDRAW',
+    'wallet_status_pending' => 'Pending...',
+    'wallet_status_success' => 'Successful',
+    'wallet_status_cancelled' => 'Cancelled',
+    'wallet_promo' => 'ENTER PROMOCODE',
+    'wallet_autowithdraw' => 'Auto-withdraw',
+    'wallet_withdraw_cancelled' => 'Withdrawal successfully cancelled',
+    'wallet_withdraw_placed' => 'Funds successfully placed for withdrawal. Expected time: 5 minutes to 24 hours',
+
+    // Profile
+    'profile_title' => 'Profile',
+    'profile_stats_deposit' => 'Deposit',
+    'profile_stats_withdraw' => 'Withdraw',
+    'profile_id' => 'ID',
+    'profile_status' => 'Status',
+    'profile_register' => 'Registration date',
+    'profile_games' => 'Games played',
+    'profile_wins' => 'Wins',
+    'profile_rating' => 'Rating',
+
+    // Bonuses
+    'bonus_title' => 'Bonuses',
+    'bonus_daily' => 'Daily Bonus',
+    'bonus_get' => 'CLAIM',
+    'bonus_already' => 'BONUS ALREADY CLAIMED',
+    'bonus_wheel' => 'Spin the wheel of fortune and earn!',
+    'bonus_try' => 'Try',
+
+    // Referral
+    'ref_title' => 'Referral Program',
+    'ref_link' => 'Referral link',
+    'ref_earnings' => 'Earnings',
+    'ref_invited' => 'Invited',
+    'ref_percent' => 'Commission percentage',
+    'ref_level1' => 'Level 1',
+    'ref_level2' => 'Level 2',
+    'ref_level3' => 'Level 3',
+
+    // Games
+    'game_slots' => 'Slots',
+    'game_dice' => 'Dice',
+    'game_mines' => 'Mines',
+    'game_crash' => 'Crash',
+    'game_x100' => 'X100',
+    'game_x30' => 'X30',
+    'game_coinflip' => 'Coin Flip',
+    'game_keno' => 'Keno',
+    'game_shoot' => 'CrazyShoot',
+    'game_jackpot' => 'Jackpot',
+    'game_wheel' => 'Wheel',
+
+    // Betting
+    'bet_place' => 'Place bet',
+    'bet_amount' => 'Bet amount',
+    'bet_win' => 'Win',
+    'bet_chance' => 'Chance',
+    'bet_multiplier' => 'Multiplier',
+    'bet_cashout' => 'Cash out',
+    'bet_autocashout' => 'Auto cash out',
+    'bet_place_btn' => 'PLAY',
+
+    // Crash
+    'crash_info_title' => 'Crash Mode',
+    'crash_info_text' => 'Crash is an online game and, like all online games, has network-related limitations',
+    'crash_latency' => 'Your internet connection speed',
+    'crash_ping' => 'Ping to server (Latency)',
+    'crash_power' => 'Smartphone or computer performance',
+    'crash_response' => 'Server response time',
+    'crash_disclaimer' => 'LuckySpin Casino does not guarantee timely execution of manual withdrawal after clicking (the "Cash Out" button) and strongly recommends using the automatic withdrawal function (the "Auto Cash Out" field).',
+    'crash_autowithdraw' => 'The "Auto Cash Out" function runs on the server side, reducing the risk of withdrawal timing issues by 99.9%',
+    'crash_agree' => 'I understand. Close',
+
+    // Demo
+    'demo_title' => 'Add Demo Balance',
+    'demo_amount' => 'Amount:',
+    'demo_total' => 'Total to pay:',
+    'demo_btn' => 'ADD',
+
+    // FAQ
+    'faq_title' => 'F.A.Q',
+    'faq_what_is' => 'What is LuckySpin?',
+    'faq_what_is_answer' => 'LuckySpin — instant games service.',
+
+    // Errors
+    'error_404_title' => 'Page not found',
+    'error_ban_title' => 'Your account has been blocked!',
+    'error_ban_text' => 'If you believe this is a mistake, please contact support.',
+    'error_ban_id' => 'Your ID',
+    'error_ban_btn' => 'Contact support',
+    'error_soon' => 'Technical maintenance',
+    'error_go_home' => 'Go home',
+
+    // Footer
+    'footer_rights' => 'LuckySpin.vip — ALL RIGHTS RESERVED.',
+    'footer_terms' => 'Terms',
+    'footer_policy' => 'Privacy Policy',
+
+    // Common
+    'common_loading' => 'Loading...',
+    'common_online' => 'Online',
+    'common_search' => 'Search',
+    'common_copy' => 'Copied',
+    'common_close' => 'Close',
+    'common_back' => 'Back',
+    'common_confirm' => 'Confirm',
+    'common_cancel' => 'Cancel',
+    'common_save' => 'Save',
+    'common_delete' => 'Delete',
+    'common_edit' => 'Edit',
+    'common_add' => 'Add',
+
+    // Time
+    'time_seconds' => 'sec',
+    'time_minutes' => 'min',
+    'time_hours' => 'hr',
+    'time_days' => 'd',
+    
+    // System
+    'system_maintenance' => 'Technical maintenance in progress',
+    'system_update' => 'Update',
+    'system_success' => 'Success',
+    'system_error' => 'Error',
+    'system_warning' => 'Warning',
+];

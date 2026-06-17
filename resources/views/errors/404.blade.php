@@ -2,7 +2,7 @@
 <html>
 <head> 
     <meta charset="utf-8">
-    <title>SO-YOU-START.RU</title>
+    <title>LuckySpin Casino</title>
     <meta name="viewport" content="width=device-width, user-scalable=yes">
     <link rel="stylesheet" type="text/css" href="/css/style.css?v=@php echo time(); @endphp">
     <link rel="stylesheet" type="text/css" href="/css/main.css?v=@php echo time(); @endphp">
@@ -28,3 +28,37 @@
  </div>
 </body>
  </html>
+            </div>
+        </div>
+        <div class="faq__item">
+            <div class="faq__item-heading d-flex align-center">
+                <b class="faq__item-question d-flex align-center justify-center">?</b>
+                <span>Какая минимальная сумма вывода?</span>
+            </div>
+            <div class="faq__item-body">
+                <p>Минимальная сумма вывода составляет 100Р.</p>
+            </div>
+        </div>
+        <div class="faq__item">
+            <div class="faq__item-heading d-flex align-center">
+                <b class="faq__item-question d-flex align-center justify-center">?</b>
+                <span>Мой вывод отклонён, что делать?</span>
+            </div>
+            <div class="faq__item-body">
+                <p>Скорее всего вы неправильно ввели данные, либо нарушили наши правила.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+   $('.faq__item .faq__item-heading').click(function(e){
+    e.preventDefault();
+    if($(this).parent().hasClass('faq__item--opened')) {
+        $(this).parent().removeClass('faq__item--opened').css({'max-height':'60px'});
+    } else {
+        $('.faq__item.faq__item--opened').removeClass('faq__item--opened').css({'max-height':'60px'});
+        $(this).parent().addClass('faq__item--opened').css({'max-height': $(this).parent()[0].scrollHeight});
+    }
+});
+</script>
