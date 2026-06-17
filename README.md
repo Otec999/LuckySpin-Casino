@@ -1,255 +1,427 @@
-# 🎰 LuckySpin Casino Platform
+<div align="center">
 
-<p align="center">
-  <img src="https://img.shields.io/badge/version-1.0.0-blue" alt="Version">
-  <img src="https://img.shields.io/badge/Laravel-7.x-red" alt="Laravel">
-  <img src="https://img.shields.io/badge/PHP-7.2%2F8.0-purple" alt="PHP">
-  <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
-</p>
+# 🎰 LUCKYSPIN CASINO
 
-**LuckySpin Casino** — современная онлайн-казино платформа с множеством игр: Слоты, Кости (Dice), Мины (Mines), X100, X30, Crash, Coin Flip, Keno, CrazyShoot, Wheel, Jackpot и многое другое. Полноценная система платежей, реферальная программа, ежедневные бонусы, чат и административная панель.
+### *Spin to Win!* 🍀
+
+[![Version](https://img.shields.io/badge/version-1.0.0-gold?style=for-the-badge&labelColor=1a1a2e)](https://github.com/Otec999/LuckySpin-Casino)
+[![Laravel](https://img.shields.io/badge/Laravel-7.x-red?style=for-the-badge&logo=laravel&logoColor=white&labelColor=1a1a2e)](https://laravel.com)
+[![PHP](https://img.shields.io/badge/PHP-7.2%2F8.0-777bb3?style=for-the-badge&logo=php&logoColor=white&labelColor=1a1a2e)](https://php.net)
+[![MySQL](https://img.shields.io/badge/MySQL-00758f?style=for-the-badge&logo=mysql&logoColor=white&labelColor=1a1a2e)](https://mysql.com)
+[![Redis](https://img.shields.io/badge/Redis-dc382d?style=for-the-badge&logo=redis&logoColor=white&labelColor=1a1a2e)](https://redis.io)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge&labelColor=1a1a2e)](https://opensource.org/licenses/MIT)
+
+<br>
+
+> **LuckySpin Casino** — это премиальная онлайн-казино платформа премиум-класса.  
+> Слоты, Dice, Mines, Crash, X100, X30, Coin Flip, Keno, CrazyShoot и многое другое.  
+> Полная система платежей, реферальная программа, чат реального времени, админ-панель.
+
+<br>
 
 ---
 
-## 📋 Содержание
+## 🌐 LANGUAGE / ЯЗЫК / DİL
 
-- [🇷🇺 Русский](#-русский)
-- [🇬🇧 English](#-english)
-- [🇦🇿 Azərbaycanca](#-azərbaycanca)
+| 🇷🇺 | 🇬🇧 | 🇦🇿 |
+|:---:|:---:|:---:|
+| **[Русский](#-русский)** | **[English](#-english)** | **[Azərbaycanca](#-azərbaycanca)** |
 
 ---
 
-## 🇷🇺 Русский
+</div>
 
-### Описание
+<br>
 
-LuckySpin Casino — это полнофункциональная платформа для онлайн-казино, построенная на Laravel 7. Платформа включает в себя широкий спектр азартных игр, систему пополнения и вывода средств, реферальную программу, чат реального времени и панель администратора.
+<a name="русский"></a>
 
-### 🎮 Игры
+# 🇷🇺 ДОБРО ПОЖАЛОВАТЬ В LUCKYSPIN CASINO
 
-| Игра | Описание |
-|------|----------|
-| **Слоты (Slots)** | Классические игровые автоматы от ведущих провайдеров |
-| **Dice** | Игра в кости — угадай число и умножь ставку |
-| **Mines** | Мины — рискни и открой безопасные клетки |
-| **X100 / X30** | Молниеносные игры с множителями до x100 |
-| **Crash** | Набирай множитель и забери деньги вовремя |
-| **Coin Flip** | Орёл или решка |
-| **Keno** | Лотерейная игра с числами |
-| **CrazyShoot** | Охота за множителями |
+<div align="center">
 
-### ⚙️ Технологии
+```
+⭐  ПРЕМИАЛЬНАЯ ПЛАТФОРМА ДЛЯ АЗАРТНЫХ ИГР  ⭐
+```
 
-- **Backend:** Laravel 7, PHP 7.2+/8.0
-- **Frontend:** Vue.js, jQuery, Bootstrap 4, SCSS
-- **База данных:** MySQL
-- **Кэширование:** Redis
-- **Веб-сокеты:** Socket.IO, Elephant.io
-- **Платежи:** Qiwi, YooMoney и другие системы
-- **Авторизация:** VK, Google, Yandex, Telegram (через Socialite)
+</div>
 
-### 🚀 Быстрый запуск
+## 📖 ОПИСАНИЕ
 
-#### Windows:
+**LuckySpin Casino** — это мощная, современная и полностью функциональная платформа для онлайн-казино, построенная на **Laravel 7**. Проект включает в себя всё необходимое для запуска полноценного казино: от десятков игр до полной финансовой инфраструктуры.
 
-```bash
+---
+
+## 🎮 ИГРЫ
+
+| # | Игра | Описание |
+|:---:|------|----------|
+| 🎰 | **Slots** | Классические игровые автоматы от ведущих мировых провайдеров |
+| 🎲 | **Dice** | Кости — угадай число и умножь свою ставку |
+| 💣 | **Mines** | Мины — рискни и открой безопасные клетки |
+| 🚀 | **Crash** | Набирай множитель и забери деньги вовремя |
+| 💥 | **X100** | Молниеносная игра с множителем до x100 |
+| ⚡ | **X30** | Быстрая игра с множителем до x30 |
+| 🪙 | **Coin Flip** | Орёл или решка — классика |
+| 🔢 | **Keno** | Лотерейная игра с числами |
+| 🎯 | **CrazyShoot** | Охота за множителями |
+
+---
+
+## ⚙️ ТЕХНОЛОГИИ
+
+<div align="center">
+
+| Технология | Назначение |
+|------------|------------|
+| 🖥 **Laravel 7** | Backend фреймворк |
+| 🐘 **PHP 7.2+/8.0** | Язык программирования |
+| 🎨 **Vue.js + jQuery** | Frontend |
+| 🅱 **Bootstrap 4 + SCSS** | Стилизация |
+| 🗄 **MySQL** | База данных |
+| ⚡ **Redis** | Кэширование |
+| 🔌 **Socket.IO / Elephant.io** | Веб-сокеты (чат, игры) |
+| 💳 **Qiwi, YooMoney и др.** | Платежные системы |
+| 🔑 **VK, Google, Yandex, Telegram** | Авторизация через Socialite |
+
+</div>
+
+---
+
+## 🚀 БЫСТРЫЙ СТАРТ
+
+### 🪟 Windows
+
+```powershell
 setup.bat
 ```
 
-#### Linux / macOS:
+### 🐧 Linux / 🍎 macOS
 
 ```bash
 chmod +x setup.sh
 ./setup.sh
 ```
 
-#### Ручная установка:
+### 📦 Ручная установка
 
 ```bash
+# 1. Установка PHP зависимостей
 composer install
+
+# 2. Настройка окружения
 cp .env.example .env
 php artisan key:generate
+
+# 3. Миграция базы данных
 php artisan migrate --force
+
+# 4. Кэширование
 php artisan config:cache
 php artisan route:cache
 php artisan view:cache
+
+# 5. Frontend зависимости
 npm install
 npm run production
+
+# 6. Запуск
+php artisan serve
 ```
 
-### 🔧 Настройка
+---
 
-1. Отредактируйте файл `.env` — укажите данные базы данных, Redis и ключи API
-2. Настройте авторизацию через VK, Google, Yandex, Telegram в `.env`
-3. Настройте платежные системы
-4. Запустите сервер:
+## 🔧 НАСТРОЙКА
+
+1. ✏️ Отредактируйте **`.env`** — укажите данные БД, Redis, ключи API
+2. 🔑 Настройте авторизацию (**VK, Google, Yandex, Telegram**) в `.env`
+3. 💰 Настройте платежные системы
+4. 🚀 Запустите сервер:
 
 ```bash
 php artisan serve
 ```
 
-### 📧 Поддержка
+---
 
-По всем вопросам обращайтесь в Telegram: [@mortalsoft](https://t.me/mortalsoft)
+## 📞 ПОДДЕРЖКА
+
+<div align="center">
+
+[![Telegram](https://img.shields.io/badge/Telegram-%40mortalsoft-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/mortalsoft)
+
+</div>
 
 ---
 
-## 🇬🇧 English
+<br>
 
-### Description
+<a name="english"></a>
 
-**LuckySpin Casino** is a full-featured online casino platform built on Laravel 7. It includes a wide range of gambling games, deposit and withdrawal systems, referral program, real-time chat, and admin panel.
+# 🇬🇧 WELCOME TO LUCKYSPIN CASINO
 
-### 🎮 Games
+<div align="center">
 
-| Game | Description |
-|------|-------------|
-| **Slots** | Classic slot machines from top providers |
-| **Dice** | Dice game — guess the number and multiply your bet |
-| **Mines** | Mines — take risks and uncover safe tiles |
-| **X100 / X30** | Lightning-fast games with multipliers up to x100 |
-| **Crash** | Ride the multiplier and cash out in time |
-| **Coin Flip** | Heads or tails |
-| **Keno** | Lottery-style number game |
-| **CrazyShoot** | Multiplier hunting |
+```
+⭐  PREMIUM ONLINE CASINO PLATFORM  ⭐
+```
 
-### ⚙️ Tech Stack
+</div>
 
-- **Backend:** Laravel 7, PHP 7.2+/8.0
-- **Frontend:** Vue.js, jQuery, Bootstrap 4, SCSS
-- **Database:** MySQL
-- **Cache:** Redis
-- **WebSockets:** Socket.IO, Elephant.io
-- **Payments:** Qiwi, YooMoney and other systems
-- **Auth:** VK, Google, Yandex, Telegram (via Socialite)
+## 📖 DESCRIPTION
 
-### 🚀 Quick Start
+**LuckySpin Casino** is a powerful, modern, and fully-featured online casino platform built on **Laravel 7**. The project includes everything you need to launch a full-fledged casino: from dozens of games to a complete financial infrastructure.
 
-#### Windows:
+---
 
-```bash
+## 🎮 GAMES
+
+| # | Game | Description |
+|:---:|------|-------------|
+| 🎰 | **Slots** | Classic slot machines from top global providers |
+| 🎲 | **Dice** | Roll the dice — guess the number and multiply your bet |
+| 💣 | **Mines** | Take risks and uncover safe tiles |
+| 🚀 | **Crash** | Ride the multiplier and cash out in time |
+| 💥 | **X100** | Lightning-fast game with x100 multiplier |
+| ⚡ | **X30** | Fast game with x30 multiplier |
+| 🪙 | **Coin Flip** | Heads or tails — classic game |
+| 🔢 | **Keno** | Lottery-style number game |
+| 🎯 | **CrazyShoot** | Multiplier hunting |
+
+---
+
+## ⚙️ TECH STACK
+
+<div align="center">
+
+| Technology | Purpose |
+|------------|---------|
+| 🖥 **Laravel 7** | Backend framework |
+| 🐘 **PHP 7.2+/8.0** | Programming language |
+| 🎨 **Vue.js + jQuery** | Frontend |
+| 🅱 **Bootstrap 4 + SCSS** | Styling |
+| 🗄 **MySQL** | Database |
+| ⚡ **Redis** | Cache |
+| 🔌 **Socket.IO / Elephant.io** | WebSockets (chat, games) |
+| 💳 **Qiwi, YooMoney etc.** | Payment systems |
+| 🔑 **VK, Google, Yandex, Telegram** | Auth via Socialite |
+
+</div>
+
+---
+
+## 🚀 QUICK START
+
+### 🪟 Windows
+
+```powershell
 setup.bat
 ```
 
-#### Linux / macOS:
+### 🐧 Linux / 🍎 macOS
 
 ```bash
 chmod +x setup.sh
 ./setup.sh
 ```
 
-#### Manual Setup:
+### 📦 Manual Setup
 
 ```bash
+# 1. Install PHP dependencies
 composer install
+
+# 2. Environment setup
 cp .env.example .env
 php artisan key:generate
+
+# 3. Database migration
 php artisan migrate --force
+
+# 4. Cache
 php artisan config:cache
 php artisan route:cache
 php artisan view:cache
+
+# 5. Frontend dependencies
 npm install
 npm run production
+
+# 6. Run server
+php artisan serve
 ```
 
-### 🔧 Configuration
+---
 
-1. Edit `.env` file — set database credentials, Redis and API keys
-2. Configure VK, Google, Yandex, Telegram auth in `.env`
-3. Configure payment systems
-4. Start the server:
+## 🔧 CONFIGURATION
+
+1. ✏️ Edit **`.env`** — set database credentials, Redis, API keys
+2. 🔑 Configure auth (**VK, Google, Yandex, Telegram**) in `.env`
+3. 💰 Configure payment systems
+4. 🚀 Start the server:
 
 ```bash
 php artisan serve
 ```
 
-### 📧 Support
+---
 
-Contact us on Telegram: [@mortalsoft](https://t.me/mortalsoft)
+## 📞 SUPPORT
+
+<div align="center">
+
+[![Telegram](https://img.shields.io/badge/Telegram-%40mortalsoft-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/mortalsoft)
+
+</div>
 
 ---
 
-## 🇦🇿 Azərbaycanca
+<br>
 
-### Təsvir
+<a name="azərbaycanca"></a>
 
-**LuckySpin Casino** Laravel 7 üzərində qurulmuş tam funksional onlayn kazino platformasıdır. Platformaya geniş çeşidli qumar oyunları, depozit və çıxarış sistemi, referal proqramı, real-time söhbət və admin paneli daxildir.
+# 🇦🇿 LUCKYSPIN CASINOSUNA XOŞ GƏLDİNİZ
 
-### 🎮 Oyunlar
+<div align="center">
 
-| Oyun | Təsvir |
-|------|--------|
-| **Slots** | Qabaqcıl provayderlərdən klassik oyun maşınları |
-| **Dice** | Zər oyunu — rəqəmi tap və mərcini artır |
-| **Mines** | Mina — risk et və təhlükəsiz xanaları aç |
-| **X100 / X30** | x100-ə qədər çarpanlı sürətli oyunlar |
-| **Crash** | Çarpanı yığ və vaxtında pulu çıxar |
-| **Coin Flip** | Yazı və ya tura |
-| **Keno** | Nömrələrlə lotereya oyunu |
-| **CrazyShoot** | Çarpan ovu |
+```
+⭐  PREMIUM ONLINE KAZİNO PLATFORMASI  ⭐
+```
 
-### ⚙️ Texnologiyalar
+</div>
 
-- **Backend:** Laravel 7, PHP 7.2+/8.0
-- **Frontend:** Vue.js, jQuery, Bootstrap 4, SCSS
-- **Məlumat bazası:** MySQL
-- **Keş:** Redis
-- **Veb-soketlər:** Socket.IO, Elephant.io
-- **Ödənişlər:** Qiwi, YooMoney və digər sistemlər
-- **Giriş:** VK, Google, Yandex, Telegram (Socialite vasitəsilə)
+## 📖 TƏSVİR
 
-### 🚀 Sürətli başlanğıc
+**LuckySpin Casino** — **Laravel 7** üzərində qurulmuş güclü, müasir və tam funksional onlayn kazino platformasıdır. Layihə onlarla oyundan tutmuş tam maliyyə infrastrukturuna qədər tam hüquqlu kazino işə salmaq üçün lazım olan hər şeyi əhatə edir.
 
-#### Windows:
+---
 
-```bash
+## 🎮 OYUNLAR
+
+| # | Oyun | Təsvir |
+|:---:|------|--------|
+| 🎰 | **Slots** | Qabaqcıl dünya provayderlərindən klassik oyun maşınları |
+| 🎲 | **Dice** | Zər at — rəqəmi tap və mərcini artır |
+| 💣 | **Mines** | Risk et və təhlükəsiz xanaları aç |
+| 🚀 | **Crash** | Çarpanı yığ və vaxtında pulu çıxar |
+| 💥 | **X100** | x100 çarpanlı sürətli oyun |
+| ⚡ | **X30** | x30 çarpanlı sürətli oyun |
+| 🪙 | **Coin Flip** | Yazı və ya tura — klassik oyun |
+| 🔢 | **Keno** | Nömrələrlə lotereya oyunu |
+| 🎯 | **CrazyShoot** | Çarpan ovu |
+
+---
+
+## ⚙️ TEXNOLOGİYALAR
+
+<div align="center">
+
+| Texnologiya | Məqsəd |
+|-------------|--------|
+| 🖥 **Laravel 7** | Backend framework |
+| 🐘 **PHP 7.2+/8.0** | Proqramlaşdırma dili |
+| 🎨 **Vue.js + jQuery** | Frontend |
+| 🅱 **Bootstrap 4 + SCSS** | Stil |
+| 🗄 **MySQL** | Məlumat bazası |
+| ⚡ **Redis** | Keş |
+| 🔌 **Socket.IO / Elephant.io** | Veb-soketlər (söhbət, oyunlar) |
+| 💳 **Qiwi, YooMoney və s.** | Ödəniş sistemləri |
+| 🔑 **VK, Google, Yandex, Telegram** | Socialite ilə giriş |
+
+</div>
+
+---
+
+## 🚀 SÜRƏTLİ BAŞLANĞIC
+
+### 🪟 Windows
+
+```powershell
 setup.bat
 ```
 
-#### Linux / macOS:
+### 🐧 Linux / 🍎 macOS
 
 ```bash
 chmod +x setup.sh
 ./setup.sh
 ```
 
-#### Əl ilə qurulum:
+### 📦 Əl ilə qurulum
 
 ```bash
+# 1. PHP asılılıqlarının quraşdırılması
 composer install
+
+# 2. Mühitin qurulması
 cp .env.example .env
 php artisan key:generate
+
+# 3. Məlumat bazasının miqrasiyası
 php artisan migrate --force
+
+# 4. Keş
 php artisan config:cache
 php artisan route:cache
 php artisan view:cache
+
+# 5. Frontend asılılıqları
 npm install
 npm run production
+
+# 6. Serverin işə salınması
+php artisan serve
 ```
 
-### 🔧 Quraşdırma
+---
 
-1. `.env` faylını redaktə edin — məlumat bazası, Redis və API açarlarını qeyd edin
-2. VK, Google, Yandex, Telegram girişini `.env` faylında konfiqurasiya edin
-3. Ödəniş sistemlərini konfiqurasiya edin
-4. Serveri işə salın:
+## 🔧 QURAŞDIRMA
+
+1. ✏️ **`.env`** faylını redaktə edin — məlumat bazası, Redis, API açarlarını qeyd edin
+2. 🔑 **VK, Google, Yandex, Telegram** girişini `.env` faylında konfiqurasiya edin
+3. 💰 Ödəniş sistemlərini konfiqurasiya edin
+4. 🚀 Serveri işə salın:
 
 ```bash
 php artisan serve
 ```
 
-### 📧 Dəstək
+---
 
-Telegram-da əlaqə saxlayın: [@mortalsoft](https://t.me/mortalsoft)
+## 📞 DƏSTƏK
+
+<div align="center">
+
+[![Telegram](https://img.shields.io/badge/Telegram-%40mortalsoft-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/mortalsoft)
+
+</div>
 
 ---
 
-## 📄 Лицензия / License
+<br>
 
-This project is licensed under the MIT License.
+<div align="center">
 
 ---
 
-<p align="center">
-  <b>LuckySpin Casino</b> — <i>Spin to Win!</i> 🍀
-</p>
+## 📄 LİSENZİYA / LICENSE
+
+```
+MIT License
+```
+
+---
+
+<br>
+
+# 🍀 LUCKYSPIN CASINO
+
+### *Spin to Win!*
+
+**© 2026 LuckySpin Casino. All rights reserved.**
+
+<br>
+
+[![GitHub stars](https://img.shields.io/github/stars/Otec999/LuckySpin-Casino?style=social)](https://github.com/Otec999/LuckySpin-Casino)
+[![GitHub forks](https://img.shields.io/github/forks/Otec999/LuckySpin-Casino?style=social)](https://github.com/Otec999/LuckySpin-Casino)
+
+</div>
