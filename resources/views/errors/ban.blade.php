@@ -2,8 +2,7 @@
 <html>
 <head> 
     <meta charset="utf-8">
-    <title>GOLDEN-X</title>
-    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <title>LuckySpin Casino</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css?v=@php echo time(); @endphp">
     <link rel="stylesheet" type="text/css" href="/css/main.css?v=@php echo time(); @endphp">
 

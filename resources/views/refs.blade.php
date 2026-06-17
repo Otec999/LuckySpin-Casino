@@ -9,7 +9,7 @@
                                     <div class="bx-input__input d-flex align-center justify-space-between"  style="width: 81%;">
                                         <label class="d-flex align-center">Реф. ссылка:</label>
                                         <div class="d-flex align-center">
-                                            <span class="bx-input__text" onclick="copy('ref_link')" id="ref_link" >https://golden-x.vip/go/{{\Auth::user()->id}}</span>
+                                            <span class="bx-input__text" onclick="copy('ref_link')" id="ref_link" >https://luckyspin.vip/go/{{\Auth::user()->id}}</span>
                                         </div>
                                     </div>
                                     <div class="bonus__buttons d-flex align-center">

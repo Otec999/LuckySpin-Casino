@@ -35,7 +35,7 @@ if not exist .env (
     copy .env.example .env >nul 2>nul
 )
 if not exist .env (
-    echo APP_NAME=LuckyCasino > .env
+    echo APP_NAME=LuckySpin Casino > .env
     echo APP_ENV=production >> .env
     echo APP_KEY= >> .env
     echo APP_DEBUG=false >> .env

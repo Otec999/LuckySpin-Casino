@@ -26,7 +26,7 @@ echo ""
 echo "[2/6] Настройка .env..."
 if [ ! -f .env ]; then
     cat > .env << 'ENVEOF'
-APP_NAME=LuckyCasino
+APP_NAME="LuckySpin Casino"
 APP_ENV=production
 APP_KEY=
 APP_DEBUG=false

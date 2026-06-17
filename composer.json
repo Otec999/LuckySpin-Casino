@@ -1,7 +1,7 @@
 {
-    "name": "goldenx/casino",
+    "name": "luckyspin/casino",
     "type": "project",
-    "description": "Online Casino Platform with Slots, Dice, Mines and More!",
+    "description": "Online Casino Platform with Slots, Dice, Mines and More! - LuckySpin Casino",
     "keywords": [
         "framework",
         "laravel"
@@ -71,3 +71,4 @@
         ]
     }
 }
+
