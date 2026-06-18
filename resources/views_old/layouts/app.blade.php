@@ -3,11 +3,11 @@
 <html>
 <head> 
     <meta charset="utf-8">
-    <title>LiftUp</title>
+    <title>LuckySpin Casino</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, user-scalable=yes">
-    <meta name="description" content="LiftUp" />
-    <meta name="keywords" content="liftup, nvuti, cabura, лифтап, лифт, деньги, поднять" />
+    <meta name="description" content="LuckySpin Casino" />
+    <meta name="keywords" content="LuckySpin Casino, nvuti, cabura, лифтап, лифт, деньги, поднять" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" type="text/css" id="themeSite" href="css/light.css">

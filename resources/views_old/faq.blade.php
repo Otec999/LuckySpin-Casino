@@ -8,8 +8,8 @@
 				
 
 				<div class="content-area-bonus" style="width:100%;min-height: 10px;padding: 26px;">
-					<span class="title_faq">Что такое Liftup.wtf?</span>
-					<span class="content_faq">Liftup.wtf - сервис мгновенных игр.</span>
+					<span class="title_faq">Что такое LuckySpin?</span>
+					<span class="content_faq">LuckySpin - сервис мгновенных игр.</span>
 				</div>
 
 				<div class="content-area-bonus" style="width:100%;min-height: 10px;padding: 26px;">

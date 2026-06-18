@@ -40,7 +40,7 @@
 						<div style="padding:25px">
 							<div class="text_promo_a" style="margin-top:20px">Ваша реферальная ссылка</div>
 							<div style="position:relative;margin-top: 20px;">
-								<input readonly="" onclick="copy('ref_link')" id="ref_link" value="https://liftup.wtf/go/{{\Auth::user()->id}}" class="input_ref" name="">
+								<input readonly="" onclick="copy('ref_link')" id="ref_link" value="https://luckyspin.vip/go/{{\Auth::user()->id}}" class="input_ref" name="">
 								
 
 								<svg width="12" height="16" viewBox="0 0 12 16" class="dop_icon_ref"  onclick="copy('ref_link')" fill="none" xmlns="http://www.w3.org/2000/svg">

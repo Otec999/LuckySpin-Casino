@@ -63,8 +63,8 @@ $snow = 0;
     defer
     ></script>
 
-    <!-- <script async src="https://telegram.org/js/telegram-widget.js?21" data-telegram-login="betusxbot" data-size="large" data-auth-url="https://betusx.pro/tg/auth/callback" data-request-access="write"></script>
-    <script src="https://telegram.org/js/widget-frame.js?60" data-telegram-login="betusxbot" data-size="large" data-auth-url="https://betusx.pro/tg/auth/callback" data-request-access="write"></script> -->
+    <!-- <script async src="https://telegram.org/js/telegram-widget.js?21" data-telegram-login="luckyspin_bot" data-size="large" data-auth-url="https://luckyspin.vip/tg/auth/callback" data-request-access="write"></script>
+    <script src="https://telegram.org/js/widget-frame.js?60" data-telegram-login="luckyspin_bot" data-size="large" data-auth-url="https://luckyspin.vip/tg/auth/callback" data-request-access="write"></script> -->
 
 </head> 
 
