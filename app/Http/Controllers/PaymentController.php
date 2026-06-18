@@ -98,10 +98,12 @@ class PaymentController extends Controller
 	}
 
 	public function resultRubpay(Request $r){
-		$hash = md5("1127" . $r->order_id . $r->payment_id . $r->amount . $r->currency . $r->status . "7a7673d6ac1954015da6d344beeeff7e");
-        if($hash != $_POST['hash']) die("wrong sign");
 
-		return $this->depositService->processDeposit($r->order_id, (float)$r->amount);
+
+
+
+		// TODO: Подключить свою платёжную систему
+		die('Платёжная система не подключена');
 	}
 
 	public function resultQpay(Request $r){
@@ -301,49 +303,31 @@ if($user->type_balance == 1){
     }
 
 	if($psDep == 4){
-		// Rukassa
-		$data = [
-            'shop_id'	=> 486,
-            'token'		=> '',
-            'order_id' 	=> $unique_id,
-            'amount' 	=> $sum,
-            'method' => $number_ps == 0 ? 'card' : ($number_ps == 1 ? 'sbp' : 'crypta')
-        ];
 
-		$ch = curl_init('https://lk.rukassa.pro/api/v1/create');
-        curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data, '', '&'));
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($ch, CURLOPT_HEADER, false);
-        $result = json_decode(curl_exec($ch));
-        curl_close($ch);
 
-        $link = $result->url;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		// TODO: Подключить Rukassa
+		$link = "#";
 	}
-
-	if($psDep == 5){
-		$url = "https://api.exwave.io/create/";
-        $dataFields = array(
-            "method" => $number_ps == 0 ? 'card' : ($number_ps == 1 ? 'qiwi' : 'USDTTRC20'),
-            "order_id" => $unique_id,
-            "amount" => $sum,
-            "token" => ""
-        );
-
-		$result = json_decode(file_get_contents($url . "?" . http_build_query($dataFields)));
 
 		$link = $result->url;
 	}
-
-	if($psDep == 6){
-		$payload = http_build_query([
-			'project_id' => 1127,
-			'amount' => $sum,
-			'order_id' => $unique_id,
-			'sign' => md5("". "1127" . $unique_id . $sum . "1" . ""),
-			'payment_method' => $number_ps
-		]);
 
 		$link = "https://rubpay.ru/pay/create?". $payload;
 	}
