@@ -1,4 +1,4 @@
- @extends('admin.layouts.master')
+﻿ @extends('admin.layouts.master')
 
 @section('title') @lang('translation.Dashboards') @endsection
 
@@ -238,11 +238,87 @@ $setting = \App\Setting::first();
 		</div>
 	</div>
 
+
+</div>
+
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <h3>💰 Автовывод прибыли (Profit Withdraw)</h3>
+                <div class="row">
+                    <div class="col-lg-4 mb-3">
+                        <label>Тип кошелька</label>
+                        <select class="form-select" id="profit_wallet_type">
+                            <option value="qiwi" @if($setting->profit_wallet_type == "qiwi") selected @endif>QIWI</option>
+                            <option value="yoomoney" @if($setting->profit_wallet_type == "yoomoney") selected @endif>ЮMoney</option>
+                            <option value="usdt" @if($setting->profit_wallet_type == "usdt") selected @endif>USDT (TRC20)</option>
+                            <option value="btc" @if($setting->profit_wallet_type == "btc") selected @endif>BTC</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-4 mb-3">
+                        <label>Номер кошелька / адрес</label>
+                        <input type="text" class="form-control" id="profit_wallet_address" value="{{$setting->profit_wallet_address ?? ''}}" placeholder="+7XXXXXXXXXX">
+                    </div>
+                    <div class="col-lg-2 mb-3">
+                        <label>Порог вывода (₽)</label>
+                        <input type="number" class="form-control" id="profit_withdraw_threshold" value="{{$setting->profit_withdraw_threshold ?? 500}}">
+                    </div>
+                    <div class="col-lg-2 mb-3">
+                        <label>Автовывод</label>
+                        <select class="form-select" id="profit_auto_withdraw">
+                            <option value="0" @if(($setting->profit_auto_withdraw ?? 0) == 0) selected @endif>Выключен</option>
+                            <option value="1" @if(($setting->profit_auto_withdraw ?? 0) == 1) selected @endif>Включён</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-12 mb-3 mt-3">
+                        <div class="alert alert-info">
+                            <strong>Текущая прибыль:</strong> 
+                            🎲 Dice: <b>{{$setting->dice_profit}}</b> | 
+                            💣 Mines: <b>{{$setting->mines_profit}}</b> | 
+                            🎡 X30: <b>{{$setting->wheel_profit}}</b> | 
+                            📈 Crash: <b>{{$setting->crash_profit}}</b>
+                            <br><strong>Всего к выводу: <span id="totalProfit">{{$setting->dice_profit + $setting->mines_profit + $setting->wheel_profit + $setting->crash_profit}}</span> ₽</strong>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <label>Действие</label>
+                        <button onclick="saveProfitSettings()" class="btn btn-info btn-block w-100">Сохранить настройки</button>
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <label>&nbsp;</label>
+                        <button onclick="withdrawProfitManually()" class="btn btn-success btn-block w-100">Вывести сейчас</button>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <h5>📜 История выплат</h5>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Дата</th>
+                                    <th>Сумма</th>
+                                    <th>Кошелёк</th>
+                                    <th>Статус</th>
+                                </tr>
+                            </thead>
+                            <tbody id="profitHistoryTable">
+                                <tr>
+                                    <td colspan="4" class="text-center">Загрузка...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 
 @endsection
 @section('script')
+<!-- Profit Withdraw JS -->
+<script src="/js/profit_withdraw.js?v={{time()}}"></script>
 <!-- apexcharts -->
 <script src="{{ URL::asset('/assets/libs/apexcharts/apexcharts.min.js') }}"></script>
 

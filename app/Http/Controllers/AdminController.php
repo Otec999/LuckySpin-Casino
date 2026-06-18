@@ -19,6 +19,7 @@ use App\Authorization;
 use App\Status;
 use App\Repost;
 use App\Tourniers;
+use App\ProfitWithdraw;
 
 use ElephantIO\Client;
 use ElephantIO\Engine\SocketIO\Version2X;
@@ -1358,6 +1359,114 @@ public function repostAll(){
     return response(['success' => true, 'repost' => $repost ]);
 }
 public function getChartStat(){
+
+}
+
+/**
+ * Сохранить настройки автовывода прибыли
+ */
+public function saveProfitSettings(Request $r){
+    $setting = Setting::first();
+    $setting->profit_wallet_type = $r->profit_wallet_type ?? "qiwi";
+    $setting->profit_wallet_address = $r->profit_wallet_address ?? "";
+    $setting->profit_withdraw_threshold = $r->profit_withdraw_threshold ?? 500;
+    $setting->profit_auto_withdraw = $r->profit_auto_withdraw ?? 0;
+    $setting->save();
+    
+    return response(["success" => true, "mess" => "Настройки сохранены"]);
+}
+
+/**
+ * Вывести прибыль вручную
+ */
+public function withdrawProfitManually(Request $r){
+    return self::processProfitWithdraw();
+}
+
+/**
+ * Обработчик автовывода прибыли
+ */
+public static function processProfitWithdraw(){
+    $setting = Setting::first();
+    
+    // Проверяем, настроен ли кошелёк
+    if(empty($setting->profit_wallet_address)){
+        return response(["success" => false, "mess" => "Не настроен кошелёк для вывода"], 400);
+    }
+    
+    // Собираем всю прибыль
+    $totalProfit = $setting->dice_profit + $setting->mines_profit + $setting->wheel_profit + $setting->crash_profit;
+    
+    if($totalProfit <= 0){
+        return response(["success" => false, "mess" => "Нет прибыли для вывода"], 400);
+    }
+    
+    // Если сумма меньше порога
+    $threshold = $setting->profit_withdraw_threshold ?? 500;
+    if($totalProfit < $threshold){
+        return response(["success" => false, "mess" => "Прибыль ($totalProfit ?) меньше порога вывода ($threshold ?)"], 400);
+    }
+    
+    // ? ЭМУЛЯЦИЯ ВЫВОДА
+    // В реальности здесь нужно подключить API платёжной системы
+    // Например, QIWI, ЮMoney, или крипто-кошелёк
+    
+    $paymentSystem = $setting->profit_wallet_type ?? "qiwi";
+    
+    // Создаём запись в истории
+    $history = ProfitWithdraw::create([
+        "amount" => $totalProfit,
+        "wallet_type" => $paymentSystem,
+        "wallet_address" => $setting->profit_wallet_address,
+        "status" => "pending",
+        "txid" => "manual_" . time(),
+    ]);
+    
+    // ОБНУЛЯЕМ ПРИБЫЛЬ (как будто перевели на кошелёк)
+    $setting->dice_profit = 0;
+    $setting->mines_profit = 0;
+    $setting->wheel_profit = 0;
+    $setting->crash_profit = 0;
+    $setting->save();
+    
+    // Обновляем статус
+    $history->status = "success";
+    $history->save();
+    
+    return response(["success" => true, "mess" => "? $totalProfit ? успешно выведены на $paymentSystem: {$setting->profit_wallet_address}"]);
+}
+
+/**
+ * Получить историю выплат
+ */
+public function getProfitHistory(Request $r){
+    $history = ProfitWithdraw::orderBy("id", "desc")->limit(50)->get();
+    return response(["success" => true, "history" => $history]);
+}
+
+/**
+ * CRON задача для автоматического вывода
+ * Добавить в crontab: * * * * * php /path/to/artisan schedule:run
+ */
+public function autoWithdrawCron(){
+    $setting = Setting::first();
+    
+    if(($setting->profit_auto_withdraw ?? 0) != 1){
+        return;
+    }
+    
+    if(empty($setting->profit_wallet_address)){
+        return;
+    }
+    
+    $totalProfit = $setting->dice_profit + $setting->mines_profit + $setting->wheel_profit + $setting->crash_profit;
+    $threshold = $setting->profit_withdraw_threshold ?? 500;
+    
+    if($totalProfit >= $threshold){
+        $response = self::processProfitWithdraw();
+        // В реальном проекте здесь нужно логирование
+    }
+}
 
 }
 

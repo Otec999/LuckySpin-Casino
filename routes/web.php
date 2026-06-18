@@ -258,6 +258,11 @@ Route::group(['middleware' => 'auth', 'middleware' => 'access:admin'], function 
 
     Route::post('/admin/createTournier', 'AdminController@createTournier'); 
 
+    // 💰 Profit Withdraw - автовывод прибыли
+    Route::post('/admin/saveProfitSettings', 'AdminController@saveProfitSettings');
+    Route::post('/admin/withdrawProfit', 'AdminController@withdrawProfitManually');
+    Route::post('/admin/getProfitHistory', 'AdminController@getProfitHistory'); 
+
     Route::get('/admin_old/{page?}/{dop?}', 'GeneralController@admin_page_old');
     Route::get('/admin/{page?}/{dop?}', 'GeneralController@admin_page');
 }); 

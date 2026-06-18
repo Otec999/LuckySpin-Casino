@@ -1,4 +1,4 @@
-function userBan(avatar, id, type_ban){
+﻿function userBan(avatar, id, type_ban){
 	show_modal('ban_user');
 	$('#ban_user_ava').attr('src', avatar) 
 	$('#ban_user_id').val(id)
@@ -109,7 +109,7 @@ function saveUser(){
 function searchMultUser(id){
 	$.post('/admin/searchmultuser', {_token: csrf_token, id: id}).then(e=>{
 		if(e.mults.length > 0){
-			$('.mult_info_user').removeClass('bg_success').html('Мульты есть').addClass('bg_danger')
+			$('.mult_info_user').removeClass('bg_success').html('РњСѓР»СЊС‚С‹ РµСЃС‚СЊ').addClass('bg_danger')
 		}
 		e.mults.forEach((e)=>{
 			if(e.ban == 0){
@@ -322,7 +322,7 @@ function addWallet(type){
 
 
 function closeEditSystemWithdraw(){
-	$('#title_s_w').html('Добавление систем вывода')
+	$('#title_s_w').html('Р”РѕР±Р°РІР»РµРЅРёРµ СЃРёСЃС‚РµРј РІС‹РІРѕРґР°')
 	$('#img_val').val('');
 	imgWithdraw();
 	$('#min_w').val('50');
@@ -335,7 +335,7 @@ function closeEditSystemWithdraw(){
 }
 
 function editSystemWithdraw(id, name, img, comm_percent, comm_rub, min_sum){
-	$('#title_s_w').html('Редактирование системы вывода №'+id)
+	$('#title_s_w').html('Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ СЃРёСЃС‚РµРјС‹ РІС‹РІРѕРґР° в„–'+id)
 	$('#img_val').val(img);
 	imgWithdraw();
 	$('#min_w').val(min_sum);
@@ -349,7 +349,7 @@ function editSystemWithdraw(id, name, img, comm_percent, comm_rub, min_sum){
 }
 
 function editSystemDep(id, name, img, comm_percent, min_sum, ps, number_ps){
-	$('#title_s_w').html('Редактирование системы пополнения №'+id)
+	$('#title_s_w').html('Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ СЃРёСЃС‚РµРјС‹ РїРѕРїРѕР»РЅРµРЅРёСЏ в„–'+id)
 	$('#img_val').val(img);
 	imgWithdraw();
 	$('#min_w').val(min_sum);
@@ -364,7 +364,7 @@ function editSystemDep(id, name, img, comm_percent, min_sum, ps, number_ps){
 }
 
 function closeEditSystemDep(argument) {
-	$('#title_s_w').html('Добавление систем пополнения')
+	$('#title_s_w').html('Р”РѕР±Р°РІР»РµРЅРёРµ СЃРёСЃС‚РµРј РїРѕРїРѕР»РЅРµРЅРёСЏ')
 	$('#img_val').val('');
 	imgWithdraw();
 	$('#min_w').val('50');
@@ -398,7 +398,7 @@ function saveEditSystemDep(argument) {
 	});
 }
 function editStatus(id, color, deposit, name, bonus){
-	$('#title_s_w').html('Редактирование привилегии №'+id)
+	$('#title_s_w').html('Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ РїСЂРёРІРёР»РµРіРёРё в„–'+id)
 	$('#id_status').val(id);
 	$('#color_status').val(color);
 	$('#deposit_status').val(deposit);
@@ -410,7 +410,7 @@ function editStatus(id, color, deposit, name, bonus){
 }
 
 function closeEditStatus(argument) {
-	$('#title_s_w').html('Добавление привилегий')
+	$('#title_s_w').html('Р”РѕР±Р°РІР»РµРЅРёРµ РїСЂРёРІРёР»РµРіРёР№')
 	$('#color_status').val('');
 	$('#deposit_status').val('');
 	$('#name_status').val('')
@@ -422,7 +422,7 @@ function closeEditStatus(argument) {
 
 
 function editRepost(id, color, repost, bonus){
-	$('#title_s_w').html('Редактирование уровня репоста №'+id)
+	$('#title_s_w').html('Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ СѓСЂРѕРІРЅСЏ СЂРµРїРѕСЃС‚Р° в„–'+id)
 	$('#id_repost').val(id);
 	$('#color_repost').val(color);
 	$('#to_repost').val(repost);
@@ -433,7 +433,7 @@ function editRepost(id, color, repost, bonus){
 }
 
 function closeEditRepost() {
-	$('#title_s_w').html('Добавление уровня репоста')
+	$('#title_s_w').html('Р”РѕР±Р°РІР»РµРЅРёРµ СѓСЂРѕРІРЅСЏ СЂРµРїРѕСЃС‚Р°')
 	$('#color_repost').val('');
 	$('#to_repost').val('');
 	$('#bonus_repost').val('')
@@ -1024,7 +1024,7 @@ function saveBonus(){
 				$('#plasec_input_t').html('')
 				for (var i = 1; i <= places; i++) {
 					$('#plasec_input_t').append('<div class="col-5 mb-20">\
-						<label>Приз за '+i+' место</label>\
+						<label>РџСЂРёР· Р·Р° '+i+' РјРµСЃС‚Рѕ</label>\
 						<div class="flex no_padding wrap">\
 						<div style="position:relative;margin-top: 10px;" class="col">\
 						<input type="" class="secodary_input" id="place_'+i+'_t" value="100" name="">\
@@ -1033,3 +1033,194 @@ function saveBonus(){
 						</div>')
 				}
 			}
+// ========================================
+// PROFIT WITHDRAW - АВТОВЫВОД ПРИБЫЛИ
+// ========================================
+
+function saveProfitSettings() {
+    var params = {
+        _token: csrf_token,
+        profit_wallet_type: #profit_wallet_type.val(),
+        profit_wallet_address: #profit_wallet_address.val(),
+        profit_withdraw_threshold: #profit_withdraw_threshold.val(),
+        profit_auto_withdraw: #profit_auto_withdraw.val()
+    };
+    
+    $.post('/admin/saveProfitSettings', params).then(function(e) {
+        if (e.success) {
+            notification('success', e.mess);
+        } else {
+            notification('error', e.mess);
+        }
+    });
+}
+
+function withdrawProfitManually() {
+    $.post('/admin/withdrawProfit', {_token: csrf_token}).then(function(e) {
+        if (e.success) {
+            notification('success', e.mess);
+            loadProfitHistory();
+            location.reload();
+        } else {
+            notification('error', e.mess);
+        }
+    });
+}
+
+function loadProfitHistory() {
+    $.post('/admin/getProfitHistory', {_token: csrf_token}).then(function(e) {
+        if (e.success) {
+            #profitHistoryTable.html('');
+            if (e.history.length === 0) {
+                #profitHistoryTable.append('<tr><td colspan="4" class="text-center">История пуста</td></tr>');
+                return;
+            }
+            e.history.forEach(function(item) {
+                var statusBadge = '';
+                if (item.status == 'success') statusBadge = '<span class=\"badge bg-success\">Выполнен</span>';
+                else if (item.status == 'pending') statusBadge = '<span class=\"badge bg-warning\">В обработке</span>';
+                else statusBadge = '<span class=\"badge bg-danger\">' + item.status + '</span>';
+                
+                #profitHistoryTable.append('<tr>\
+                    <td>' + item.created_at + '</td>\
+                    <td>' + item.amount + ' ?</td>\
+                    <td>' + item.wallet_type.toUpperCase() + ': ' + item.wallet_address + '</td>\
+                    <td>' + statusBadge + '</td>\
+                </tr>');
+            });
+        }
+    });
+}
+
+.ready(function() {
+    if (#profitHistoryTable.length) {
+        loadProfitHistory();
+    }
+});
+
+
+// ========================================
+// PROFIT WITHDRAW - АВТОВЫВОД ПРИБЫЛИ
+// ========================================
+
+function saveProfitSettings() {
+    var params = {
+        _token: csrf_token,
+        profit_wallet_type: #profit_wallet_type.val(),
+        profit_wallet_address: #profit_wallet_address.val(),
+        profit_withdraw_threshold: #profit_withdraw_threshold.val(),
+        profit_auto_withdraw: #profit_auto_withdraw.val()
+    };
+    
+    $.post('/admin/saveProfitSettings', params).then(function(e) {
+        if (e.success) {
+            notification('success', e.mess);
+        } else {
+            notification('error', e.mess);
+        }
+    });
+}
+
+function withdrawProfitManually() {
+    $.post('/admin/withdrawProfit', {_token: csrf_token}).then(function(e) {
+        if (e.success) {
+            notification('success', e.mess);
+            loadProfitHistory();
+            location.reload();
+        } else {
+            notification('error', e.mess);
+        }
+    });
+}
+
+function loadProfitHistory() {
+    $.post('/admin/getProfitHistory', {_token: csrf_token}).then(function(e) {
+        if (e.success) {
+            #profitHistoryTable.html('');
+            if (e.history.length === 0) {
+                #profitHistoryTable.append('<tr><td colspan="4" class="text-center">История пуста</td></tr>');
+                return;
+            }
+            e.history.forEach(function(item) {
+                var statusBadge = '';
+                if (item.status == 'success') statusBadge = '<span class="badge bg-success">Выполнен</span>';
+                else if (item.status == 'pending') statusBadge = '<span class="badge bg-warning">В обработке</span>';
+                else statusBadge = '<span class="badge bg-danger">' + item.status + '</span>';
+                
+                #profitHistoryTable.append('<tr>\
+                    <td>' + item.created_at + '</td>\
+                    <td>' + item.amount + ' ₽</td>\
+                    <td>' + item.wallet_type.toUpperCase() + ': ' + item.wallet_address + '</td>\
+                    <td>' + statusBadge + '</td>\
+                </tr>');
+            });
+        }
+    });
+}
+
+.ready(function() {
+    if (#profitHistoryTable.length) {
+        loadProfitHistory();
+    }
+});
+
+// === PROFIT WITHDRAW ===
+
+function saveProfitSettings() {
+    var params = {
+        _token: csrf_token,
+        profit_wallet_type: $('#profit_wallet_type').val(),
+        profit_wallet_address: $('#profit_wallet_address').val(),
+        profit_withdraw_threshold: $('#profit_withdraw_threshold').val(),
+        profit_auto_withdraw: $('#profit_auto_withdraw').val()
+    };
+    $.post('/admin/saveProfitSettings', params).then(function(e) {
+        if (e.success) {
+            notification('success', e.mess);
+        } else {
+            notification('error', e.mess);
+        }
+    });
+}
+
+function withdrawProfitManually() {
+    $.post('/admin/withdrawProfit', {_token: csrf_token}).then(function(e) {
+        if (e.success) {
+            notification('success', e.mess);
+            loadProfitHistory();
+            location.reload();
+        } else {
+            notification('error', e.mess);
+        }
+    });
+}
+
+function loadProfitHistory() {
+    $.post('/admin/getProfitHistory', {_token: csrf_token}).then(function(e) {
+        if (e.success) {
+            $('#profitHistoryTable').html('');
+            if (e.history.length === 0) {
+                $('#profitHistoryTable').append('<tr><td colspan="4" class="text-center">История пуста</td></tr>');
+                return;
+            }
+            e.history.forEach(function(item) {
+                var statusBadge = '';
+                if (item.status == 'success') statusBadge = '<span class="badge bg-success">Выполнен</span>';
+                else if (item.status == 'pending') statusBadge = '<span class="badge bg-warning">В обработке</span>';
+                else statusBadge = '<span class="badge bg-danger">' + item.status + '</span>';
+                $('#profitHistoryTable').append('<tr>
+                    <td>' + item.created_at + '</td>
+                    <td>' + item.amount + ' ₽</td>
+                    <td>' + item.wallet_type.toUpperCase() + ': ' + item.wallet_address + '</td>
+                    <td>' + statusBadge + '</td>
+                </tr>');
+            });
+        }
+    });
+}
+
+$(document).ready(function() {
+    if ($('#profitHistoryTable').length) {
+        loadProfitHistory();
+    }
+});
