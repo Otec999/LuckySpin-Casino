@@ -112,6 +112,7 @@ Route::post('/deposit/resultqpppay123', 'PaymentController@resultQpay');
 Route::post('/deposit/resultexx', 'PaymentController@resultExwave');
 Route::post('/deposit/resultfk', 'PaymentController@resultFK');
 Route::post('/deposit/resultpiastrix', 'PaymentController@resultPiastrix');
+Route::post('/deposit/resultprime', 'PaymentController@resultPrimePayments');
 Route::get('/deposit/resultpaypalych', 'PaymentController@resultPaypalych');
 Route::post('/deposit/resultlinepay', 'PaymentController@resultLinePay');
 

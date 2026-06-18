@@ -90,10 +90,20 @@ $setting = \App\Setting::first();
 	<div class="col-sm-12">
 		<div class="card">
 			<div class="card-body">
-				<h3>Настройки платежной системы FreeKassa</h3>
+								<h3>Настройки платежной системы FreeKassa</h3>
 				<div class="row">
+					<div class="col-lg-12 mb-3">
+						<div class="alert alert-success">
+							<strong>✅ FreeKassa — ЛУЧШИЙ ВАРИАНТ ДЛЯ АЗЕРБАЙДЖАНА</strong><br>
+							1. Зарегистрируйтесь на <a href="https://freekassa.ru" target="_blank">FreeKassa.ru</a><br>
+							2. В личном кабинете создайте магазин → получите ID, SECRET 1, SECRET 2<br>
+							3. В настройках магазина укажите URL для уведомлений: <code>{{ url('/deposit/resultfk') }}</code><br>
+							4. Введите данные ниже и нажмите "Сохранить"<br>
+							<strong>Игроки смогут пополнять картами AZN, QIWI, USDT</strong>
+						</div>
+					</div>
 					<div class="col-lg-3 mb-3">
-						<label>FK ID</label>
+						<label>FK ID (Merchant ID)</label>
 						<input type="" class="form-control" id="fk_id" value="{{$setting->fk_id}}" name="">
 					</div>
 					<div class="col-lg-3 mb-3">
@@ -116,18 +126,36 @@ $setting = \App\Setting::first();
 	<div class="col-sm-12">
 		<div class="card">
 			<div class="card-body">
-				<h3>Настройки платежной системы Piastrix</h3>
+				<h3>Настройки платежной системы PrimePayments</h3>
 				<div class="row">
-					<div class="col-lg-3 mb-3">
-						<label>Piastix ID</label>
-						<input type="" class="form-control" id="piastrix_id" value="{{$setting->piastrix_id}}" name="">
+					<div class="col-lg-12 mb-3">
+						<div class="alert alert-info">
+							<strong>ℹ️ PrimePayments — для карт Visa/Mastercard (в т.ч. AZN)</strong><br>
+							1. Зарегистрируйтесь на <a href="https://primepayments.com" target="_blank">PrimePayments.com</a><br>
+							2. Получите ID проекта, SECRET 1, SECRET 2<br>
+							3. URL уведомлений: <code>{{ url('/deposit/resultprime') }}</code><br>
+						</div>
 					</div>
 					<div class="col-lg-3 mb-3">
-						<label>Piastix SECRET</label>
-						<input type="" class="form-control" id="piastrix_secret" value="{{$setting->piastrix_secret}}" name="">
+						<label>ID проекта</label>
+						<input type="" class="form-control" id="prime_id" value="{{$setting->prime_id}}" name="">
 					</div>
-					
+					<div class="col-lg-3 mb-3">
+						<label>SECRET 1</label>
+						<input type="" class="form-control" id="prime_secret_1" value="{{$setting->prime_secret_1}}" name="">
+					</div>
+					<div class="col-lg-3 mb-3">
+						<label>SECRET 2</label>
+						<input type="" class="form-control" id="prime_secret_2" value="{{$setting->prime_secret_2}}" name="">
+					</div>
 					<div class="col-lg">
+						<label>Действие</label>
+						<button onclick="saveSetting(4)" class="btn btn-info btn-block w-100">Сохранить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 						<label>Действие</label>
 						<button onclick="saveSetting(3)" class="btn btn-info btn-block w-100">Сохранить</button>
 					</div>

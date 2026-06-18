@@ -98,12 +98,18 @@ class PaymentController extends Controller
 	}
 
 	public function resultRubpay(Request $r){
-
-
-
-
 		// TODO: Подключить свою платёжную систему
 		die('Платёжная система не подключена');
+	}
+
+	public function resultPrimePayments(Request $r){
+		// Callback для PrimePayments
+		$setting = Setting::first();
+		$secret = $setting->prime_secret_2;
+		$sign = $r->sign ?? '';
+		$expectedSign = md5($r->order_id . ':' . $r->amount . ':' . $secret);
+		if ($sign != $expectedSign) die('wrong sign');
+		return $this->depositService->processDeposit($r->order_id, (float)$r->amount);
 	}
 
 	public function resultQpay(Request $r){
@@ -303,33 +309,18 @@ if($user->type_balance == 1){
     }
 
 	if($psDep == 4){
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		// TODO: Подключить Rukassa
+		// TODO: Подключить PrimePayments
 		$link = "#";
 	}
 
-		$link = $result->url;
+	if($psDep == 5){
+		// TODO: Подключить свою платёжную систему
+		$link = "#";
 	}
 
-		$link = "https://rubpay.ru/pay/create?". $payload;
+	if($psDep == 6){
+		// TODO: Подключить свою платёжную систему
+		$link = "#";
 	}
 
     Payment::create(array(
