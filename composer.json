@@ -51,7 +51,8 @@
             "database/factories"
         ],
         "files": [
-            "app/Helpers/LanguageHelper.php"
+            "app/Helpers/LanguageHelper.php",
+            "app/Helpers.php"
         ]
     },
     "autoload-dev": {

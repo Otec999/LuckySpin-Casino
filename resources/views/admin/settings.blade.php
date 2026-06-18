@@ -22,10 +22,30 @@ $setting = \App\Setting::first();
 			<div class="card-body">
 				<h3>Настройки сайта</h3>
 				<div class="row">
-					<div class="col-lg-3 mb-3">
-						<label>Название сайта</label>
-						<input type="" class="form-control" id="name" value="{{$setting->name}}" name="">
-					</div>
+				    <div class="col-lg-3 mb-3">
+				        <label>Название сайта</label>
+				        <input type="" class="form-control" id="name" value="{{$setting->name}}" name="">
+				    </div>
+				    <div class="col-lg-2 mb-3">
+				        <label>Валюта сайта</label>
+				        <select class="form-select" id="currency" onchange="changeCurrency()">
+				            <option value="RUB" data-rate="1" data-symbol="₽" @if($setting->currency == 'RUB') selected @endif>₽ RUB (Россия)</option>
+				            <option value="AZN" data-rate="27" data-symbol="₼" @if($setting->currency == 'AZN') selected @endif>₼ AZN (Азербайджан)</option>
+				            <option value="USD" data-rate="90" data-symbol="$" @if($setting->currency == 'USD') selected @endif>$ USD (США)</option>
+				            <option value="TRY" data-rate="3.5" data-symbol="₺" @if($setting->currency == 'TRY') selected @endif>₺ TRY (Турция)</option>
+				            <option value="UAH" data-rate="2.5" data-symbol="₴" @if($setting->currency == 'UAH') selected @endif>₴ UAH (Украина)</option>
+				        </select>
+				        <small class="text-muted">1 RUB ≈ сколько в вашей валюте</small>
+				    </div>
+				    <div class="col-lg-2 mb-3">
+				        <label>Курс к RUB</label>
+				        <input type="number" step="0.0001" class="form-control" id="currency_rate" value="{{$setting->currency_rate ?? 1}}" readonly>
+				        <small class="text-muted">Авто-подставляется при выборе валюты</small>
+				    </div>
+				    <div class="col-lg-2 mb-3">
+				        <label>Символ валюты</label>
+				        <input type="" class="form-control" id="currency_symbol" value="{{$setting->currency_symbol ?? '₽'}}" readonly>
+				    </div>
 					<div class="col-lg-3 mb-3">
 						<label>Айди группы вк</label>
 						<input type="" class="form-control" id="group_id" value="{{$setting->group_id}}" name="">
@@ -298,14 +318,14 @@ $setting = \App\Setting::first();
                             <option value="1" @if(($setting->profit_auto_withdraw ?? 0) == 1) selected @endif>Включён</option>
                         </select>
                     </div>
-                    <div class="col-lg-12 mb-3 mt-3">
+                                        <div class="col-lg-12 mb-3 mt-3">
                         <div class="alert alert-info">
                             <strong>Текущая прибыль:</strong> 
-                            🎲 Dice: <b>{{$setting->dice_profit}}</b> | 
-                            💣 Mines: <b>{{$setting->mines_profit}}</b> | 
-                            🎡 X30: <b>{{$setting->wheel_profit}}</b> | 
-                            📈 Crash: <b>{{$setting->crash_profit}}</b>
-                            <br><strong>Всего к выводу: <span id="totalProfit">{{$setting->dice_profit + $setting->mines_profit + $setting->wheel_profit + $setting->crash_profit}}</span> ₽</strong>
+                            🎲 Dice: <b>{{showPrice($setting->dice_profit)}}</b> | 
+                            💣 Mines: <b>{{showPrice($setting->mines_profit)}}</b> | 
+                            🎡 X30: <b>{{showPrice($setting->wheel_profit)}}</b> | 
+                            📈 Crash: <b>{{showPrice($setting->crash_profit)}}</b>
+                            <br><strong>Всего к выводу: <span id="totalProfit">{{showPrice($setting->dice_profit + $setting->mines_profit + $setting->wheel_profit + $setting->crash_profit)}}</span></strong>
                         </div>
                     </div>
                     <div class="col-lg-3 mb-3">

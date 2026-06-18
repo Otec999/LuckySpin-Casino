@@ -1,4 +1,3 @@
-
 var csrf_token = $('meta[name="csrf-token"]').attr('content')
 var chart = {
   height: 350,
@@ -81,9 +80,9 @@ var axisTicks = {
 function  statUpdate(id, that) {
   $.post('/admin/chart',{_token: csrf_token, id}).then(e=>{
 
-    $('#deposits').html(parseFloat(e.deps_n).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")+' ₽')
-    $('#withdraws').html(parseFloat(e.withdraws_n).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")+' ₽')
-    $('#profit').html(parseFloat(e.profit_n).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")+' ₽')
+    $('#deposits').html(parseFloat(e.deps_n).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")+' '+e.currency_symbol)
+    $('#withdraws').html(parseFloat(e.withdraws_n).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")+' '+e.currency_symbol)
+    $('#profit').html(parseFloat(e.profit_n).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")+' '+e.currency_symbol)
 
     $('.stat-pills .nav-link').removeClass('active')
     $(that).addClass('active')
@@ -320,7 +319,10 @@ function saveSetting(type){
       dep_createpromo: $('#dep_createpromo').val(),
       meta_tags: $('#meta_tags').val(),
       max_withdraw_bonus: $("#max_withdraw_bonus").val(),
-      theme: $("#theme").val()}
+      theme: $("#theme").val(),
+      currency: $('#currency').val(),
+      currency_rate: $('#currency_rate').val(),
+      currency_symbol: $('#currency_symbol').val()}
   }
 
   if(type == 2){
@@ -369,6 +371,14 @@ function saveSetting(type){
   });
 }
 
+function changeCurrency() {
+  var selected = $('#currency option:selected');
+  var rate = selected.data('rate');
+  var symbol = selected.data('symbol');
+  $('#currency_rate').val(rate);
+  $('#currency_symbol').val(symbol);
+}
+
 function resetBank(type){
   $.post('/admin/resetBank',{_token: csrf_token, type}).then(e=>{
     if(e.success){
@@ -394,8 +404,6 @@ function placesTourniers() {
               ')
         }
 }
-
-
 
 function createTournier(){
   name = $('#name_t').val();

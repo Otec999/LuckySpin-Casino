@@ -279,7 +279,7 @@ class AdminController extends Controller
         $setting = Setting::first();
         $type = $r->type;
 
-        if($type == 1){
+                if($type == 1){
             $setting->name = $r->name;
             $setting->group_id = $r->group_id;
             $setting->group_token = $r->group_token;
@@ -293,6 +293,9 @@ class AdminController extends Controller
             $setting->meta_tags = $r->meta_tags;
             $setting->max_withdraw_bonus = $r->max_withdraw_bonus;
             $setting->theme = $r->theme;
+            $setting->currency = $r->currency;
+            $setting->currency_rate = $r->currency_rate;
+            $setting->currency_symbol = $r->currency_symbol;
         }
 
         if($type == 2){
@@ -619,14 +622,15 @@ class AdminController extends Controller
         $withdraws_n = array_sum($withdraws);
         $profit_n = array_sum($profit);
 
-        return response()->json([
+                return response()->json([
             'deps' => $deps,
             'withdraws' => $withdraws,
             'profit' => $profit,
             'labels' => $labels,
             'deps_n' => $deps_n,
             'withdraws_n' => $withdraws_n,
-            'profit_n' => $profit_n
+            'profit_n' => $profit_n,
+            'currency_symbol' => Setting::first()->currency_symbol ?? '₽'
         ], 200);
 
 
